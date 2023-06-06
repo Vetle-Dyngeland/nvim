@@ -9,8 +9,6 @@ return {
                 transparent = false,
                 disable_nvimtree_bg = false,
             })
-
-            vscode.load()
         end
     },
     {
