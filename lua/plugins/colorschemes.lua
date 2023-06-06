@@ -11,7 +11,6 @@ return {
             })
 
             vscode.load()
-            vim.cmd [[ colorscheme vscode ]]
         end
     },
     {
@@ -33,13 +32,20 @@ return {
             onedark.setup({
                 toggle_style_key = "<leader>odt",
                 code_style = {
-                    comments = "none";
+                    comments = "none",
                 },
                 diagnostics = {
                     darker = false,
                     undercurl = false,
                 }
             })
+        end
+    },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        config = function()
+            vim.cmd [[colorscheme catppuccin-macchiato]]
         end
     }
 }
