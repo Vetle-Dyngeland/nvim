@@ -17,6 +17,13 @@ map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", opts("Move up"))
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", opts("Move down"))
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", opts("Move up"))
 
+map("n", "<A-l>", "xp", opts("Move right"))
+map("n", "<A-h>", "xhP", opts("Move left"))
+map("v", "<A-l>", "xpgv", opts("Move right"))
+map("v", "<A-h>", "xhPgv", opts("Move left"))
+map("i", "<A-l>", "<esc>lxpga", opts("Move right"))
+map("i", "<A-h>", "<esc>xhPa", opts("Move left"))
+
 -- BEST REMAPS
 map("n", "<A-O>", "O<esc>")
 map("n", "<A-o>", "o<esc>")
