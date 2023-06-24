@@ -3,7 +3,6 @@ return {
     branch = "v2.x",
     dependencies = {
         "neovim/nvim-lspconfig",
-
         {
             "williamboman/mason.nvim",
             build = function()
@@ -38,8 +37,8 @@ return {
             map("n", "K", function() vim.lsp.buf.hover() end, opts("Lsp hover"))
             map("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts("Open floating diagnostics"))
             map("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts("Code action"))
-            map("n", "]d", function() vim.diagnostic.goto_next() end, opts("Go to next diagnostic"))
-            map("n", "[d", function() vim.diagnostic.goto_prev() end, opts("Go to previous diagnostic"))
+            map("n", "vn", function() vim.diagnostic.goto_next() end, opts("Go to next diagnostic"))
+            map("n", "vN", function() vim.diagnostic.goto_prev() end, opts("Go to previous diagnostic"))
             map("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts("Rename (vim)"))
             map("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts("Signature help"))
         end)
@@ -110,10 +109,10 @@ return {
                 completeopt = "menu,menuone,noinsert"
             },
             sources = {
-                {name = "nvim_lsp"},
-                {name = "luasnip"},
-                {name = "path"},
-                {name = "buffer"},
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+                { name = "path" },
+                { name = "buffer" },
             }
         })
 
