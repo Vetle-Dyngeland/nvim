@@ -11,23 +11,32 @@ return {
             sync_root_with_cwd = true,
             reload_on_bufenter = true,
             respect_buf_cwd = true,
+            prefer_startup_root = true,
+            sort_by = "modification_time",
+            view = {
+                width = 30,
+                side = "right",
+            },
             renderer = {
-                indent_markers = {
-                    enable = true,
-                }
+                add_trailing = true,
+                highlight_git = true,
+                root_folder_label = ":~:s?$?/ ?",
+                indent_markers = { enable = true },
+                icons = { git_placement = "after" },
             },
             update_focused_file = {
                 enable = true,
-                update_root = true
+                update_root = true,
             },
             diagnostics = {
                 enable = true,
                 severity = {
                     min = vim.diagnostic.severity.WARN
-                }
+                },
             },
             git = {
-                timeout = 5000
+                timeout = 5000,
+                ignore = false,
             }
         })
 
