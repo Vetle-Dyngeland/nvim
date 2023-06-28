@@ -10,7 +10,6 @@ return {
             reload_on_bufenter = true,
             respect_buf_cwd = true,
             prefer_startup_root = true,
-            sort_by = "modification_time",
             renderer = {
                 add_trailing = true,
                 highlight_git = true,
