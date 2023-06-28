@@ -1,4 +1,5 @@
 return {
+    require("plugins.other.project"),
     require("plugins.other.lsp-utils"),
     require("plugins.other.lsp"),
     require("plugins.other.telescope"),
