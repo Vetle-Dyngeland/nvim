@@ -7,9 +7,7 @@ return {
         "nvim-telescope/telescope.nvim"
     },
     config = function()
-        local chat = require("chatgpt")
-
-        chat.setup({
+        require("chat").setup({
             api_key_cmd = vim.env.OPENAI_API_KEY,
         })
     end

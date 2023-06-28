@@ -2,9 +2,7 @@ return {
     {
         "Mofiqul/vscode.nvim",
         config = function()
-            local vscode = require("vscode")
-
-            vscode.setup({
+            require("vscode").setup({
                 italic_comments = false,
                 transparent = false,
                 disable_nvimtree_bg = false,
@@ -14,9 +12,7 @@ return {
     {
         "folke/tokyonight.nvim",
         config = function()
-            local tokyonight = require("tokyonight")
-
-            tokyonight.setup({
+            require("tokyonight").setup({
                 style = "moon",
                 dim_inactive = true,
             })
@@ -25,9 +21,7 @@ return {
     {
         "navarasu/onedark.nvim",
         config = function()
-            local onedark = require("onedark")
-
-            onedark.setup({
+            require("onedark").setup({
                 toggle_style_key = "<leader>odt",
                 code_style = {
                     comments = "none",
@@ -43,9 +37,7 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         config = function()
-            local catppuccin = require("catppuccin")
-
-            catppuccin.setup({
+            require("catppuccin").setup({
                 show_end_of_buffer = true,
                 term_colors = true,
                 styles = {

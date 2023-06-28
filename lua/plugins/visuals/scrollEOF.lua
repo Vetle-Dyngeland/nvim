@@ -1,9 +1,7 @@
 return {
     "Aasim-A/scrollEOF.nvim",
     config = function()
-        local scroll = require("scrollEOF")
-
-        scroll.setup({
+        require("scroll").setup({
             insert_mode = true,
         })
     end

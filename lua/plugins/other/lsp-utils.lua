@@ -2,9 +2,7 @@ return {
     {
         "ray-x/lsp_signature.nvim",
         config = function()
-            local signature = require("lsp_signature")
-
-            signature.setup({
+            require("lsp_signature").setup({
                 doc_lines = 6,
                 max_height = 8,
                 hint_enable = true,
@@ -27,9 +25,7 @@ return {
             "neovim/nvim-lspconfig"
         },
         config = function()
-            local rt = require("rust-tools")
-
-            local opts = {
+            require("rust-tools").setup({
                 flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
                 root_dir = require("lspconfig").util.root_pattern("Cargo.toml"),
                 settings = {
@@ -46,9 +42,7 @@ return {
                         }
                     }
                 }
-            }
-
-            rt.setup(opts)
+            })
         end
     },
     {

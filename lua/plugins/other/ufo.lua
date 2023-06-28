@@ -6,9 +6,7 @@ return {
         vim.o.foldlevel = 99
         vim.o.foldlevelstart = 99
 
-        local ufo = require("ufo")
-
-        ufo.setup({
+        require("ufo").setup({
             provider_selector = function(_, _, _)
                 return { 'treesitter', 'indent' }
             end
