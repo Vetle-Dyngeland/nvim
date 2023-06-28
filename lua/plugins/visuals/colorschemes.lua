@@ -48,16 +48,12 @@ return {
             catppuccin.setup({
                 show_end_of_buffer = true,
                 term_colors = true,
-                dim_inactive = {
-                    enabled = true,
-                    percentage = "0.20"
-                },
                 styles = {
                     conditionals = {},
                 },
             })
 
-            vim.cmd [[colorscheme catppuccin-frappe]]
+            vim.cmd [[colorscheme catppuccin-macchiato]]
         end
     },
 }
