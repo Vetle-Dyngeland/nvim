@@ -9,7 +9,7 @@ g.markdown_recommended_style = 0
 opt.clipboard = "unnamedplus"
 
 opt.termguicolors = true
-opt.colorcolumn = "79"
+opt.colorcolumn = "80"
 opt.signcolumn = "yes"
 
 opt.nu = true
