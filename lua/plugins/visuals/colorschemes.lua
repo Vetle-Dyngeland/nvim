@@ -43,7 +43,21 @@ return {
         "catppuccin/nvim",
         name = "catppuccin",
         config = function()
-            vim.cmd [[colorscheme catppuccin-macchiato]]
+            local catppuccin = require("catppuccin")
+
+            catppuccin.setup({
+                show_end_of_buffer = true,
+                term_colors = true,
+                dim_inactive = {
+                    enabled = true,
+                    percentage = "0.20"
+                },
+                styles = {
+                    conditionals = {},
+                },
+            })
+
+            vim.cmd [[colorscheme catppuccin-frappe]]
         end
     },
 }
