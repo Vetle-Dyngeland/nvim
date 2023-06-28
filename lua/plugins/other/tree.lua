@@ -13,10 +13,6 @@ return {
             respect_buf_cwd = true,
             prefer_startup_root = true,
             sort_by = "modification_time",
-            view = {
-                width = 30,
-                side = "right",
-            },
             renderer = {
                 add_trailing = true,
                 highlight_git = true,
