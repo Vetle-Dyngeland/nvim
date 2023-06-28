@@ -5,5 +5,8 @@ return {
         vim.g.barbar_auto_setup = false
     end,
     opts = {
+        sidebar_filetypes = {
+            NvimTree = true
+        }
     }
 }
