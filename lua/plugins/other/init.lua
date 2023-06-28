@@ -1,4 +1,5 @@
 return {
+    require("plugins.other.lazygit"),
     require("plugins.other.scrollbar"),
     require("plugins.other.ufo"),
     require("plugins.other.smartcolumn"),
