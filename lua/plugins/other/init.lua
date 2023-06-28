@@ -1,5 +1,4 @@
 return {
-    require("plugins.other.illuminate"),
     require("plugins.other.smartcolumn"),
     require("plugins.other.project"),
     require("plugins.other.lsp-utils"),
