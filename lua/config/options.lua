@@ -6,8 +6,6 @@ g.loaded_netwrPlugin = 1
 
 g.markdown_recommended_style = 0
 
-opt.clipboard = "unnamedplus"
-
 opt.termguicolors = true
 opt.colorcolumn = "80"
 opt.signcolumn = "yes"
