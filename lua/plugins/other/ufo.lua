@@ -9,7 +9,8 @@ return {
         require("ufo").setup({
             provider_selector = function(_, _, _)
                 return { 'treesitter', 'indent' }
-            end
+            end,
+            open_fold_hl_timeout = 200,
         })
     end
 }
