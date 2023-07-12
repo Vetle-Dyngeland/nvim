@@ -36,26 +36,5 @@ map("n", "<C-Down>", "<cmd>res -2<cr>", opts("Decrease window height"))
 map("n", "<C-Left>", "<cmd>vert res -2<cr>", opts("Decrease window width"))
 map("n", "<C-Right>", "<cmd>vert res +2<cr>", opts("Increase window width"))
 
--- Buffers
-map('n', '<A-,>', '<cmd>BufferPrevious<cr>', opts("Move to previous buffer"))
-map('n', '<A-.>', '<cmd>BufferNext<cr>', opts("Move to next buffer"))
-
-map('n', '<A-<>', '<cmd>BufferMovePrevious<cr>', opts("Move buffer back"))
-map('n', '<A->>', '<cmd>BufferMoveNext<cr>', opts("Move buffer forward"))
-
-map('n', '<A-1>', '<cmd>BufferGoto 1<cr>', opts("Go to buffer 1"))
-map('n', '<A-2>', '<cmd>BufferGoto 2<cr>', opts("Go to buffer 2"))
-map('n', '<A-3>', '<cmd>BufferGoto 3<cr>', opts("Go to buffer 3"))
-map('n', '<A-4>', '<cmd>BufferGoto 4<cr>', opts("Go to buffer 4"))
-map('n', '<A-5>', '<cmd>BufferGoto 5<cr>', opts("Go to buffer 5"))
-map('n', '<A-6>', '<cmd>BufferGoto 6<cr>', opts("Go to buffer 6"))
-map('n', '<A-7>', '<cmd>BufferGoto 7<cr>', opts("Go to buffer 7"))
-map('n', '<A-8>', '<cmd>BufferGoto 8<cr>', opts("Go to buffer 8"))
-map('n', '<A-9>', '<cmd>BufferGoto 9<cr>', opts("Go to buffer 9"))
-map('n', '<A-0>', '<cmd>BufferLast<cr>', opts("Go to last buffer"))
-
-map('n', '<A-p>', '<cmd>BufferPin<cr>', opts("Toggle buffer pin"))
-map('n', '<A-c>', '<cmd>BufferClose!<cr>', opts("Close buffer"))
-
 -- Other
 map("t", "<leader>qq", "<C-\\><C-n>")

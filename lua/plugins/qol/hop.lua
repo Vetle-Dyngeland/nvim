@@ -38,10 +38,10 @@ return {
             })
         end, opts("Hop: single line search before cursor"))
 
-        map("", "<leader>hc", "<cmd>HopChar1<cr>", { desc = "Hop: character search" })
-        map("", "<leader>hv", "<cmd>HopChar2<cr>", { desc = "Hop: two characters search" })
+        map("", "gc", "<cmd>HopChar1<cr>", { desc = "Hop: character search" })
+        map("", "gC", "<cmd>HopChar2<cr>", { desc = "Hop: two characters search" })
 
-        map("", "<leader>hp", "<cmd>HopPattern<cr>", { desc = "Hop: pattern search" })
-        map("", "<leader>hw", "<cmd>HopWord<cr>", { desc = "Hop: word search" })
+        map("", "gp", "<cmd>HopPattern<cr>", { desc = "Hop: pattern search" })
+        map("", "gw", "<cmd>HopWord<cr>", { desc = "Hop: word search" })
     end
 }
