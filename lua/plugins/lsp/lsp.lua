@@ -36,7 +36,7 @@ return {
             map("n", "gr", function() vim.lsp.buf.references() end, opts("Go to references"))
             map("n", "K", function() vim.lsp.buf.hover() end, opts("Lsp hover"))
             map("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts("Open floating diagnostics"))
-            map("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts("Code action"))
+            map("n", "<leader>vca", "<cmd>CodeActionMenu<cr>", opts("Code action"))
             map("n", "<leader>vn", function() vim.diagnostic.goto_next() end, opts("Go to next diagnostic"))
             map("n", "<leader>vN", function() vim.diagnostic.goto_prev() end, opts("Go to previous diagnostic"))
             map("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts("Rename (vim)"))

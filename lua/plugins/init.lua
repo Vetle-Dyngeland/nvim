@@ -1,17 +1,22 @@
 local function require_files_in_path(t, path)
     for file in io.popen("ls -pa " .. path):lines() do
-        -- If the file is this file, don't source it
+        -- If the file is this file, ignore it
         if file == "init.lua" then
             goto continue
         end
         -- If the file is a directory, and is not ./ or ../,
         -- source all files in that directory
         if file:sub(-1) == "/" then
-            if not string.match(file, "%./") then
+            if not file:match("%./") then
                 require_files_in_path(t, path .. file)
             end
             goto continue
         end
+        -- If it is not a lua file, ignore it
+        if not file:match(".lua") then
+            goto continue
+        end
+
         -- If it is a valid file however...
 
         -- Fix the string
