@@ -19,5 +19,10 @@ return {
         map("n", "<leader>hd", function() ui.nav_file(3) end, opts("Harpoon: Navigate to file 3"))
         map("n", "<leader>hf", function() ui.nav_file(4) end, opts("Harpoon: Navigate to file 4"))
         map("n", "<leader>hg", function() ui.nav_file(5) end, opts("Harpoon: Navigate to file 5"))
+        map("n", "<leader>hz", function() ui.nav_file(6) end, opts("Harpoon: Navigate to file 6"))
+        map("n", "<leader>hx", function() ui.nav_file(7) end, opts("Harpoon: Navigate to file 7"))
+        map("n", "<leader>hc", function() ui.nav_file(8) end, opts("Harpoon: Navigate to file 8"))
+        map("n", "<leader>hv", function() ui.nav_file(9) end, opts("Harpoon: Navigate to file 9"))
+        map("n", "<leader>hb", function() ui.nav_file(10) end, opts("Harpoon: Navigate to file 10"))
     end
 }
