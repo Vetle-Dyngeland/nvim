@@ -22,7 +22,7 @@ return {
         "navarasu/onedark.nvim",
         config = function()
             require("onedark").setup({
-                toggle_style_key = "<leader>odt",
+                toggle_style_key = "<leader>od",
                 code_style = {
                     comments = "none",
                 },

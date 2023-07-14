@@ -16,7 +16,7 @@ return {
 
         local map = vim.keymap.set
 
-        map("n", "<leader>pn", "<cmd>lua require(\"telescope\").extensions.notify.notify()<cr>",
+        map("n", "<leader>on", "<cmd>lua require(\"telescope\").extensions.notify.notify()<cr>",
             { desc = "See recent notifications" })
     end
 }

@@ -5,6 +5,6 @@ return {
 
         local map = vim.keymap.set
 
-        map("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open lazygit" })
+        map("n", "<leader>g", "<cmd>LazyGit<cr>", { desc = "Open lazygit" })
     end
 }
