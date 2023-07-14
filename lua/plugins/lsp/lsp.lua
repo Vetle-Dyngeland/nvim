@@ -33,7 +33,7 @@ return {
             local map = vim.keymap.set
 
             map("n", "gd", function() vim.lsp.buf.definition() end, opts("Go to definition"))
-            map("n", "gr", function() vim.lsp.buf.references() end, opts("Go to references"))
+            map("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts("Toggle Trouble lsp_references"))
             map("n", "K", function() vim.lsp.buf.hover() end, opts("Lsp hover"))
             map("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts("Open floating diagnostics"))
             map("n", "<leader>va", "<cmd>CodeActionMenu<cr>", opts("Code action"))
