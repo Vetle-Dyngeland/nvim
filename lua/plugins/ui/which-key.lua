@@ -12,6 +12,7 @@ return {
             ["<leader>o"] = { name = "Other" },
             ["<leader>h"] = { name = "Harpoon" },
             ["<leader>v"] = { name = "Lsp" },
+            ["<leader>w"] = { name = "Window" },
         })
     end
 }

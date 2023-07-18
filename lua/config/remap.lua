@@ -4,10 +4,6 @@ local function opts(description)
     return { silent = true, noremap = true, desc = description }
 end
 
--- File navigation
-map("n", "<leader>pv", "<cmd>Ex<cr>0", opts("File explorer"))
-map("n", "<leader>pt", "<cmd>Lex<cr>0", opts("File explorer in sidebar"))
-
 -- Movement
 map("n", "<A-j>", "<cmd>m .+1<cr>==", opts("Move down"))
 map("n", "<A-k>", "<cmd>m .-2<cr>==", opts("Move up"))
@@ -30,6 +26,11 @@ map("n", "<leader>ww", function()
 
     vim.cmd("vert res " .. width .. "<cr>")
 end, opts("Change window width"))
+map("n", "<leader>wh", function()
+    local height = vim.fn.input("Height > ")
+
+    vim.cmd("res " .. height .. "<cr>")
+end, opts("Change window height"))
 
 -- Other
 map("t", "<leader>qq", "<C-\\><C-n>")
