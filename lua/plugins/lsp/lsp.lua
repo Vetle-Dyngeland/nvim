@@ -32,6 +32,7 @@ return {
 
             local map = vim.keymap.set
 
+            map("n", "<leader>f", vim.lsp.buf.format, opts("Format"))
             map("n", "gd", function() vim.lsp.buf.definition() end, opts("Go to definition"))
             map("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts("Toggle Trouble lsp_references"))
             map("n", "K", function() vim.lsp.buf.hover() end, opts("Lsp hover"))

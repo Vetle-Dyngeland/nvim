@@ -1,9 +1,6 @@
 local opt = vim.opt
 local g = vim.g
 
-g.loaded_netwr = 1
-g.loaded_netwrPlugin = 1
-
 g.markdown_recommended_style = 0
 
 opt.termguicolors = true
