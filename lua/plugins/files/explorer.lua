@@ -38,7 +38,6 @@ return {
         local map = vim.keymap.set
 
         map("n", "<leader>pv", "<cmd>e .<cr>", { desc = "File explorer" })
-        map("n", "<leader>pt", "<cmd>e pwd<cr>", { desc = "File explorer in file dir" })
 
         require("lir.git_status").setup({
             show_ignored = true,
