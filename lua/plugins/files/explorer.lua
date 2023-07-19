@@ -1,49 +1,16 @@
 return {
-    "tamago324/lir.nvim",
-    dependencies = {
-        "tamago324/lir-git-status.nvim",
-        "nvim-tree/nvim-web-devicons",
-    },
+    "kelly-lin/ranger.nvim",
     config = function()
-        local actions = require("lir.actions")
-        local clipboard = require("lir.clipboard.actions")
-
-        require("lir").setup({
-            show_hidden_files = true,
-            devicons = {
-                enable = true,
-                highlight_dirname = true,
-            },
-            mappings = {
-                ["l"] = actions.edit,
-                ["s"] = actions.split,
-                ["S"] = actions.vsplit,
-
-                ["h"] = actions.up,
-                ["q"] = actions.quit,
-
-                ["d"] = actions.delete,
-                ["@"] = actions.cd,
-                ["a"] = actions.newfile,
-                ["A"] = actions.mkdir,
-                ["r"] = actions.rename,
-                ["Y"] = actions.yank_path,
-
-                ["c"] = clipboard.copy,
-                ["x"] = clipboard.cut,
-                ["p"] = clipboard.paste,
-            },
+        local ranger = require("ranger-nvim")
+        ranger.setup({
+            replace_netwr = true,
+            enable_cmds = true,
         })
 
         local map = vim.keymap.set
 
-        map("n", "<leader>pv", "<cmd>e .<cr>", { desc = "File explorer" })
-        map("n", "<leader>pt", function()
-            vim.cmd("cd .")
-            vim.cmd("e .")
-        end, { desc = "File explorer at current file pwd" })
-        require("lir.git_status").setup({
-            show_ignored = true,
-        })
+        map("n", "<leader>pv", function()
+            require("ranger-nvim").open(true)
+        end, { desc = "File explorer" })
     end
 }
