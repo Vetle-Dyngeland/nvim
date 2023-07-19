@@ -38,6 +38,10 @@ return {
         local map = vim.keymap.set
 
         map("n", "<leader>pv", "<cmd>e .<cr>", { desc = "File explorer" })
+        map("n", "<leader>pt", function()
+            vim.cmd("cd .")
+            vim.cmd("e .")
+        end, { desc = "File explorer at current file pwd" })
         require("lir.git_status").setup({
             show_ignored = true,
         })
