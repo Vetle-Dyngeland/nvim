@@ -32,8 +32,8 @@ return {
 
         local map = vim.keymap.set
 
-        map("n", "<A-,>", "<cmd>BufferPrevious<cr>", opts("BarBar: Previous buffer"))
-        map("n", "<A-.>", "<cmd>BufferNext<cr>", opts("BarBar: Next buffer"))
+        map("n", "<A-,>", "<cmd>!BufferPrevious<cr>", opts("BarBar: Previous buffer"))
+        map("n", "<A-.>", "<cmd>!BufferNext<cr>", opts("BarBar: Next buffer"))
 
         map("n", "<A-<>", "<cmd>BufferMovePrevious<cr>", opts("BarBar: Move buffer left"))
         map("n", "<A->>", "<cmd>BufferMoveNext<cr>", opts("BarBar: Move buffer right"))
@@ -44,7 +44,7 @@ return {
         end, opts("Goto buffer at index"))
 
         map("n", "<A-p>", "<cmd>BufferPin<cr>", opts("Pin buffer"))
-        map("n", "<A-c>", "<cmd>BufferClose<cr>", opts("Close buffer"))
+        map("n", "<A-c>", "<cmd>!BufferClose<cr>", opts("Close buffer"))
     end
 
 }
