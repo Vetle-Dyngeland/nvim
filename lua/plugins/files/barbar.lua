@@ -5,6 +5,28 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     init = function() vim.g.barbar_auto_setup = false end,
+    keys = function()
+        local keys = {}
+
+        local function opts(description)
+            return { silent = true, noremap = true, desc = description }
+        end
+
+        table.insert(keys, { "<A-,>", "<cmd>BufferPrevious<cr>", opts("BarBar: Previous buffer") })
+        table.insert(keys, { "<A-.>", "<cmd>BufferNext<cr>", opts("BarBar: Next buffer") })
+
+        table.insert(keys, { "<A-<>", "<cmd>BufferMovePrevious<cr>", opts("BarBar: Move buffer left") })
+        table.insert(keys, { "<A->>", "<cmd>BufferMoveNext<cr>", opts("BarBar: Move buffer right") })
+
+        table.insert(keys, { "<A-b>", function()
+            local idx = vim.fn.input("Buffer index > ")
+            vim.cmd("BufferGoto " .. idx)
+        end, opts("Goto buffer at index") })
+
+        table.insert(keys, { "<A-p>", "<cmd>BufferPin<cr>", opts("Pin buffer") })
+        table.insert(keys, { "<A-c>", "<cmd>BufferClose!<cr>", opts("Close buffer") })
+        return keys
+    end,
     config = function()
         require("barbar").setup({
             animation = false,
@@ -26,25 +48,5 @@ return {
             },
 
         })
-        local function opts(description)
-            return { silent = true, noremap = true, desc = description }
-        end
-
-        local map = vim.keymap.set
-
-        map("n", "<A-,>", "<cmd>BufferPrevious<cr>", opts("BarBar: Previous buffer"))
-        map("n", "<A-.>", "<cmd>BufferNext<cr>", opts("BarBar: Next buffer"))
-
-        map("n", "<A-<>", "<cmd>BufferMovePrevious<cr>", opts("BarBar: Move buffer left"))
-        map("n", "<A->>", "<cmd>BufferMoveNext<cr>", opts("BarBar: Move buffer right"))
-
-        map("n", "<A-b>", function()
-            local idx = vim.fn.input("Buffer index > ")
-            vim.cmd("BufferGoto "..idx)
-        end, opts("Goto buffer at index"))
-
-        map("n", "<A-p>", "<cmd>BufferPin<cr>", opts("Pin buffer"))
-        map("n", "<A-c>", "<cmd>BufferClose!<cr>", opts("Close buffer"))
-    end
-
+    end,
 }

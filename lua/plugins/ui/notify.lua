@@ -1,5 +1,9 @@
 return {
     "rcarriga/nvim-notify",
+    keys = {
+        { "<leader>on", "<cmd>lua require(\"telescope\").extensions.notify.notify()<cr>",
+            { desc = "See recent notifications" } }
+    },
     config = function()
         vim.notify = require("notify")
 
@@ -13,10 +17,5 @@ return {
             stages = "fade",
             level = 1,
         })
-
-        local map = vim.keymap.set
-
-        map("n", "<leader>on", "<cmd>lua require(\"telescope\").extensions.notify.notify()<cr>",
-            { desc = "See recent notifications" })
     end
 }

@@ -1,5 +1,10 @@
 return {
     "ahmedkhalf/project.nvim",
+    keys = {
+        {"<leader>pj", function()
+            require("telescope").extensions.projects.projects()
+        end, { desc = "Browse projects" }}
+    },
     config = function()
         require("project_nvim").setup({
             patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "Cargo.toml" },
@@ -10,11 +15,6 @@ return {
         })
 
         local telescope = require("telescope")
-
         telescope.load_extension("projects")
-
-        vim.keymap.set("n", "<leader>pj", function()
-            telescope.extensions.projects.projects()
-        end, { desc = "Browse projects" })
     end
 }

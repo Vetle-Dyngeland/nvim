@@ -1,10 +1,9 @@
 return {
     "kdheepak/lazygit.nvim",
+    keys = {
+        { "<leader>g", "<cmd>LazyGit<cr>", { desc = "Open lazygit" } }
+    },
     config = function()
         require("telescope").load_extension("lazygit")
-
-        local map = vim.keymap.set
-
-        map("n", "<leader>g", "<cmd>LazyGit<cr>", { desc = "Open lazygit" })
     end
 }
