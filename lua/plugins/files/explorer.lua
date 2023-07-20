@@ -2,7 +2,7 @@ return {
     "kelly-lin/ranger.nvim",
     keys = {
         { "<leader>pv", function()
-            require("ranger.nvim").open(true)
+            require("ranger-nvim").open(true)
         end, { desc = "File explorer" }}
     },
     config = function()
