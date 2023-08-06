@@ -1,9 +1,9 @@
 return {
     "kelly-lin/ranger.nvim",
     keys = {
-        { "<leader>pv", function()
-            require("ranger-nvim").open(true)
-        end, { desc = "File explorer" }}
+        { "<leader>pv", 
+            "<cmd>lua require(\"ranger-nvim\").open(true)<cr>"
+        , { desc = "File explorer" }}
     },
     config = function()
         local ranger = require("ranger-nvim")
