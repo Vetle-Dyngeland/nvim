@@ -1,5 +1,5 @@
 return {
-    "awerowy/tmux.nvim",
+    "aserowy/tmux.nvim",
     config = function()
         require("tmux").setup({
             copy_sync = {
