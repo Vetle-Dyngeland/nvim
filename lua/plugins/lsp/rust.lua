@@ -6,6 +6,9 @@ return {
             "neovim/nvim-lspconfig"
         },
         config = function()
+            local status = require("lsp-status")
+            status.register_progress()
+
             require("rust-tools").setup({
                 flags = { allow_incremental_sync = true, debounce_text_changes = 1000 },
                 root_dir = require("lspconfig").util.root_pattern("Cargo.toml"),
@@ -21,7 +24,9 @@ return {
                                 minLines = 30
                             },
                         }
-                    }
+                    },
+                    on_attach = status.on_attach,
+                    capabilities = status.capabilities
                 }
             })
         end
